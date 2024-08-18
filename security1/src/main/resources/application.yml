@@ -22,6 +22,24 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
 
+# 구글 로그인 설정 추가
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1001411068057-47l6ikaejfa8tng5t1ockre911ofi6h8.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+
+          facebook:
+            client-id: 1426227378041700
+            client-secret: a623307704c92fd58fb977bb77a2be52
+            scope:
+              - email
+              - public_profile
   # DevTools 설정 추가
   devtools:
     restart:
@@ -35,3 +53,4 @@ logging:
   level:
     root: INFO  # 기본 로그 레벨 설정
     com.cos.security1.controller: DEBUG  # 특정 패키지에 대한 로그 레벨 설정
+

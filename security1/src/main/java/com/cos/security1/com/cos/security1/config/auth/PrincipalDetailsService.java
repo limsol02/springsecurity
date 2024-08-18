@@ -18,6 +18,7 @@ public class PrincipalDetailsService implements UserDetailsService {
     /*
     # Security Session 안에는 Authentication 타입만 들어갈 수 있고 Authentication 타입에는 UserDetails
     이 중에 아래 리턴값은 Authentication 에 들어가고 이게 Security Session 안으로 매핑
+
     * */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
